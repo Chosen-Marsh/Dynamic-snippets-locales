@@ -54,7 +54,9 @@ The remaining sections (`sidebar`, `snippet`, `settings`, and so on) cover the p
 
 ## Checking your work
 
-Compare your file with `en.js` for missing or extra keys:
+Pull requests are checked automatically by GitHub Actions (`scripts/validate.mjs`). Run the same check locally with `npm run validate`. It fails if a locale has missing or unknown keys, changed `{placeholders}`, changed `${snippet-tokens}`, empty values, HTML, or a bad file name.
+
+You can also compare one file with `en.js` by hand:
 
 ```powershell
 node -e "const k=(o,p='')=>Object.entries(o).flatMap(([a,b])=>typeof b==='object'?k(b,p+a+'.'):[p+a]);Promise.all([import('./en.js'),import('./fr.js')]).then(([e,l])=>{const a=k(e.default),b=new Set(k(l.default));console.log('missing:',a.filter(x=>!b.has(x)))})"

@@ -1,0 +1,8 @@
+{
+  "name": "dynamic-snippets-locales",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.mjs"
+  }
+}
