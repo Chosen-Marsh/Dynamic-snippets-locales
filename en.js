@@ -178,28 +178,104 @@ export default {
   },
   welcome: {
     ariaLabel: 'Welcome',
-    heading: 'Build smart snippets in seconds',
-    lead: 'Select a snippet on the left or create one from the sidebar menu. Use variables to fill values quickly at insert time.',
+    heading: 'Write it once. Paste it anywhere.',
+    lead: 'Save text you type often, turn the parts that change into variables, and insert it on any website.',
+    newSnippet: 'New snippet',
+    tour: 'Take the tour',
+    insertTitle: 'Two ways to insert',
+    contextMenu: {
+      title: 'Right-click menu',
+      text: 'Right-click any text field and choose {menu}.'
+    },
+    slash: {
+      title: 'Slash command',
+      text: 'Give a snippet a command, then type /command in any text field.'
+    },
+    variablesTitle: 'Variables',
+    variablesHint: 'Right-click in the editor to add one',
     dropdown: {
-      title: 'Dropdown Variable',
-      text: 'Choose from predefined values at paste time.'
+      title: 'Dropdown',
+      text: 'Pick from a list'
     },
     text: {
-      title: 'Text Input Variable',
-      text: 'Prompt for custom values before inserting.'
+      title: 'Text',
+      text: 'Type a value'
     },
     date: {
-      title: 'Date Variable',
-      text: 'Pick a date and insert it using your local date format.'
+      title: 'Date',
+      text: 'Pasted in your local format'
     },
     global: {
-      title: 'Global Variable',
-      text: 'Uses a value from Settings. Missing keys paste as'
+      title: 'Global',
+      text: 'Set once in Settings'
     },
-    tip1: 'Tip: Right-click in the editor to add variables quickly.',
-    tip2: 'Tip: Use folders to group snippets by project or workflow.',
-    tip3: 'Tip: Date variables insert in your browser\'s local format.',
-    viewHistory: 'View version history'
+    viewHistory: 'Version history'
+  },
+  onboarding: {
+    ariaLabel: 'Getting started',
+    skip: 'Skip tour',
+    back: 'Back',
+    next: 'Next',
+    start: 'Show me around',
+    stepOf: 'Step {current} of {total}',
+    goToStep: 'Go to step {step}',
+    welcome: {
+      title: 'Write it once. Paste it anywhere.',
+      lead: 'Dynamic Snippets saves the text you type again and again, like replies, templates and checklists, and inserts it on any website with the blanks already filled in.',
+      p1: 'Everything stays in this browser. No account, no cloud sync.',
+      p2: 'This quick tour takes about a minute.'
+    },
+    organize: {
+      title: 'Your snippet library',
+      lead: 'Every snippet lives in the sidebar on the left. Group them into folders however you like.',
+      p1: 'Right-click the sidebar to create a snippet or a folder.',
+      p2: 'Right-click any item to rename or delete it.',
+      p3: 'Drag items to reorder them or move them into folders.',
+      p4: 'Changes save automatically as you type.',
+      saved: 'Saved'
+    },
+    variables: {
+      title: 'Variables fill in the blanks',
+      lead: 'Put a variable wherever the text changes. Each time you insert the snippet, a short form asks for the values and shows a preview.',
+      p1: 'Dropdown: choose from a list of options.',
+      p2: 'Text: type anything, with an optional default.',
+      p3: 'Date: pick from a calendar. It is inserted in your local format.',
+      p4: 'Right-click in the editor and choose {addVariable}. No syntax to learn.'
+    },
+    globals: {
+      title: 'Global variables for things that never change',
+      lead: 'Save values like your name, team or signature once and reuse them in any snippet. They fill in automatically, with no form.',
+      p1: 'Add them in Settings → {globalsTab}.',
+      p2: 'Use one with ${key-global}, or right-click in the editor and choose {addGlobalVariable}.',
+      p3: 'A key with no value pastes as "undefined", so it is easy to spot.'
+    },
+    contextMenu: {
+      title: 'Insert from the right-click menu',
+      lead: 'On any website, right-click a text field and choose {menu}. Your folders appear as submenus.',
+      p1: 'Snippets with variables open the form first, so you can check the result.',
+      p2: 'If the page will not accept the text, it is copied to your clipboard instead.'
+    },
+    slash: {
+      title: 'Or type a slash command',
+      lead: 'Give a snippet a short command in the box next to its title. Then type / and the command in any text field.',
+      p1: 'Matching snippets appear as you type.',
+      p2: 'Use ↑ and ↓ to choose, Enter to insert and Esc to close.',
+      p3: 'Commands can use letters, numbers, hyphens and underscores.'
+    },
+    personalize: {
+      title: 'Make it yours',
+      lead: 'Pick a theme now. Everything else can be changed later in Settings.',
+      p1: 'Open Settings with the gear at the bottom of the sidebar.',
+      p2: 'Change the language, theme and auto-save delay.',
+      p3: 'Use {importLabel} and {exportLabel} to back up your library or move it to another browser.'
+    },
+    ready: {
+      title: "You're all set",
+      lead: "We've added a few example snippets to the sidebar. Open one to see variables in action, or start your own.",
+      p1: 'You can replay this tour from the welcome page at any time.',
+      create: 'Create my first snippet',
+      explore: 'Explore the examples'
+    }
   },
   changelog: {
     versionHistory: 'Version history',
@@ -207,11 +283,9 @@ export default {
     releaseNotes: 'Release Notes',
     latestUpdates: 'Latest updates',
     version: 'Version {version}',
-    openChangelog: 'Open changelog',
-    closeChangelog: 'Close changelog',
+    latest: 'Latest',
+    releaseCount: '{count} releases',
     comingSoon: 'Coming soon',
-    viewingDetails: 'Viewing release details.',
-    chooseRelease: 'Choose a release card to view full changes.',
     onlyOnce: 'You will only see this once per version.',
     closeHistory: 'Close history',
     gotIt: 'Got it',
